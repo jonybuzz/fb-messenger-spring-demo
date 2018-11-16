@@ -22,7 +22,7 @@ public class WebhookController {
     }
 
     @PostMapping("/webhook")
-    public void webhookReceive(@RequestBody Map<String, String> body) {
+    public void webhookReceive(@RequestBody String body) {
         System.out.println("Body: ");
         System.out.println(body);
     }
