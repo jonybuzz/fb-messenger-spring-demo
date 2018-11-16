@@ -15,9 +15,15 @@ public class WebhookController {
         System.out.println("Body: ");
         System.out.println(body);
     }
-    
+
     @GetMapping("/webhook")
     public String webhook(@RequestParam(name = "hub.challenge") String challenge) {
         return challenge;
+    }
+
+    @PostMapping("/webhook")
+    public void webhookReceive(@RequestBody Map<String, String> body) {
+        System.out.println("Body: ");
+        System.out.println(body);
     }
 }
